@@ -7,16 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0C934E20C9B3970093D8C3 /* TableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C934D20C9B3970093D8C3 /* TableViewHeaderFooterView.swift */; };
+		BF0C935020C9B3BA0093D8C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C934F20C9B3BA0093D8C3 /* TableViewCell.swift */; };
+		BF1F403520D3C96200CDB3B7 /* NavigatorHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403320D3C96200CDB3B7 /* NavigatorHost.swift */; };
+		BF1F403620D3C96200CDB3B7 /* AnyNavigatorHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403420D3C96200CDB3B7 /* AnyNavigatorHost.swift */; };
+		BF1F403E20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403D20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift */; };
+		BF1F404020D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403F20D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift */; };
+		BF1F404420D4148300CDB3B7 /* AnyNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F404320D4148300CDB3B7 /* AnyNavigationBuilder.swift */; };
+		BF1F404620D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F404520D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift */; };
+		BF278B6E20C106A0000DF8CF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF278B6C20C106A0000DF8CF /* Model.xcdatamodeld */; };
 		BF44DB6920B8808E00092671 /* Captain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF44DB5F20B8808E00092671 /* Captain.framework */; };
 		BF44DB6E20B8808E00092671 /* CaptainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB6D20B8808E00092671 /* CaptainTests.swift */; };
 		BF44DB7020B8808E00092671 /* Captain.h in Headers */ = {isa = PBXBuildFile; fileRef = BF44DB6220B8808E00092671 /* Captain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF44DB8020B880DA00092671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB7F20B880DA00092671 /* AppDelegate.swift */; };
-		BF44DB8220B880DA00092671 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB8120B880DA00092671 /* FirstViewController.swift */; };
-		BF44DB8420B880DA00092671 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB8320B880DA00092671 /* SecondViewController.swift */; };
+		BF44DB8220B880DA00092671 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB8120B880DA00092671 /* CountryViewController.swift */; };
 		BF44DB8720B880DA00092671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF44DB8520B880DA00092671 /* Main.storyboard */; };
 		BF44DB8920B880DB00092671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF44DB8820B880DB00092671 /* Assets.xcassets */; };
 		BF44DB8C20B880DB00092671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF44DB8A20B880DB00092671 /* LaunchScreen.storyboard */; };
 		BF44DB9720B880DC00092671 /* CaptainDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB9620B880DC00092671 /* CaptainDemoUITests.swift */; };
+		BF44DBA020B9A23000092671 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB9F20B9A23000092671 /* Navigator.swift */; };
+		BF44DBA220B9A24D00092671 /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBA120B9A24D00092671 /* NavigationRoute.swift */; };
+		BF44DBA420B9A36200092671 /* NavigationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBA320B9A36200092671 /* NavigationError.swift */; };
+		BF44DBA620B9A52800092671 /* AnyNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBA520B9A52800092671 /* AnyNavigator.swift */; };
+		BF44DBA820B9A59500092671 /* GlobalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBA720B9A59500092671 /* GlobalNavigator.swift */; };
+		BF44DBC720BC0A4300092671 /* Captain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF44DB5F20B8808E00092671 /* Captain.framework */; };
+		BF44DBC820BC0A4300092671 /* Captain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF44DB5F20B8808E00092671 /* Captain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF44DBCD20BC0A9600092671 /* ContinentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBCC20BC0A9600092671 /* ContinentsTableViewController.swift */; };
+		BF44DBD320BC0F4600092671 /* ContinentsTableViewRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBD220BC0F4600092671 /* ContinentsTableViewRoute.swift */; };
+		BF44DBD520BC102400092671 /* ContinentsTableViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBD420BC102400092671 /* ContinentsTableViewNavigator.swift */; };
+		BF44DBD920BC367100092671 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBD820BC367100092671 /* Navigation.swift */; };
+		BF44DBDF20BC41B000092671 /* ContinentTableViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBDB20BC41B000092671 /* ContinentTableViewNavigator.swift */; };
+		BF44DBE020BC41B000092671 /* ContinentTableViewRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBDC20BC41B000092671 /* ContinentTableViewRoute.swift */; };
+		BF44DBE120BC41B000092671 /* ContinentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DBDD20BC41B000092671 /* ContinentTableViewController.swift */; };
+		BF44DBE620BC424E00092671 /* Continents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF44DBE520BC424E00092671 /* Continents.storyboard */; };
+		BF44DBE820BC42E900092671 /* Continent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF44DBE720BC42E900092671 /* Continent.storyboard */; };
+		BF44DC1B20BC54DD00092671 /* Country.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF44DC1A20BC54DD00092671 /* Country.storyboard */; };
+		BF69CA4620C112DE005F36B8 /* Oceans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF69CA4220C112DE005F36B8 /* Oceans.storyboard */; };
+		BF69CA4720C112DE005F36B8 /* OceansTableViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4320C112DE005F36B8 /* OceansTableViewNavigator.swift */; };
+		BF69CA4820C112DE005F36B8 /* OceansTableViewRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4420C112DE005F36B8 /* OceansTableViewRoute.swift */; };
+		BF69CA4920C112DE005F36B8 /* OceansTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4520C112DE005F36B8 /* OceansTableViewController.swift */; };
+		BF69CA4F20C11377005F36B8 /* Ocean.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF69CA4B20C11376005F36B8 /* Ocean.storyboard */; };
+		BF69CA5020C11377005F36B8 /* OceanTableViewNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4C20C11376005F36B8 /* OceanTableViewNavigator.swift */; };
+		BF69CA5120C11377005F36B8 /* OceanTableViewRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4D20C11376005F36B8 /* OceanTableViewRoute.swift */; };
+		BF69CA5220C11377005F36B8 /* OceanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4E20C11376005F36B8 /* OceanTableViewController.swift */; };
+		BF69CA6D20C26B9C005F36B8 /* ModelPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA6C20C26B9C005F36B8 /* ModelPopulator.swift */; };
+		BF7126F120D3AD6F00D83899 /* NavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7126F020D3AD6F00D83899 /* NavigationStrategy.swift */; };
+		BF8C682B20C906F900F0A8B5 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C682A20C906F900F0A8B5 /* RootTabBarController.swift */; };
+		BF8C682E20C9073000F0A8B5 /* RootTabBarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C682D20C9073000F0A8B5 /* RootTabBarNavigator.swift */; };
+		BF8C683020C9073800F0A8B5 /* RootTabBarRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C682F20C9073800F0A8B5 /* RootTabBarRoute.swift */; };
+		BF8C683220C90A8F00F0A8B5 /* RootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C683120C90A8F00F0A8B5 /* RootNavigator.swift */; };
+		BFE3570920C5B28B002F30CC /* Sea.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE3570720C5B28B002F30CC /* Sea.storyboard */; };
+		BFE3570A20C5B28B002F30CC /* SeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3570820C5B28B002F30CC /* SeaViewController.swift */; };
+		BFE3570E20C5D317002F30CC /* Continent+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3570D20C5D317002F30CC /* Continent+Extensions.swift */; };
+		BFE3571020C5D388002F30CC /* Country+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3570F20C5D388002F30CC /* Country+Extensions.swift */; };
+		BFE3571220C5D3A2002F30CC /* Ocean+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3571120C5D3A2002F30CC /* Ocean+Extensions.swift */; };
+		BFE3571420C5D3B2002F30CC /* Sea+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE3571320C5D3B2002F30CC /* Sea+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +79,39 @@
 			remoteGlobalIDString = BF44DB7C20B880DA00092671;
 			remoteInfo = CaptainDemo;
 		};
+		BF44DBC920BC0A4300092671 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF44DB5620B8808E00092671 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF44DB5E20B8808E00092671;
+			remoteInfo = Captain;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BF44DBCB20BC0A4300092671 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF44DBC820BC0A4300092671 /* Captain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BF0C934D20C9B3970093D8C3 /* TableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		BF0C934F20C9B3BA0093D8C3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BF1F403320D3C96200CDB3B7 /* NavigatorHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorHost.swift; sourceTree = "<group>"; };
+		BF1F403420D3C96200CDB3B7 /* AnyNavigatorHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNavigatorHost.swift; sourceTree = "<group>"; };
+		BF1F403D20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPushNavigationStrategy.swift; sourceTree = "<group>"; };
+		BF1F403F20D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultModalNavigationStrategy.swift; sourceTree = "<group>"; };
+		BF1F404320D4148300CDB3B7 /* AnyNavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNavigationBuilder.swift; sourceTree = "<group>"; };
+		BF1F404520D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTabBarNavigationStrategy.swift; sourceTree = "<group>"; };
+		BF278B6D20C106A0000DF8CF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BF44DB5F20B8808E00092671 /* Captain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Captain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF44DB6220B8808E00092671 /* Captain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Captain.h; sourceTree = "<group>"; };
 		BF44DB6320B8808E00092671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,8 +120,7 @@
 		BF44DB6F20B8808E00092671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF44DB7D20B880DA00092671 /* CaptainDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptainDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF44DB7F20B880DA00092671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF44DB8120B880DA00092671 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BF44DB8320B880DA00092671 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BF44DB8120B880DA00092671 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		BF44DB8620B880DA00092671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF44DB8820B880DB00092671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF44DB8B20B880DB00092671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +128,41 @@
 		BF44DB9220B880DC00092671 /* CaptainDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptainDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF44DB9620B880DC00092671 /* CaptainDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptainDemoUITests.swift; sourceTree = "<group>"; };
 		BF44DB9820B880DC00092671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF44DB9F20B9A23000092671 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		BF44DBA120B9A24D00092671 /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
+		BF44DBA320B9A36200092671 /* NavigationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationError.swift; sourceTree = "<group>"; };
+		BF44DBA520B9A52800092671 /* AnyNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNavigator.swift; sourceTree = "<group>"; };
+		BF44DBA720B9A59500092671 /* GlobalNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNavigator.swift; sourceTree = "<group>"; };
+		BF44DBCC20BC0A9600092671 /* ContinentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentsTableViewController.swift; sourceTree = "<group>"; };
+		BF44DBD220BC0F4600092671 /* ContinentsTableViewRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentsTableViewRoute.swift; sourceTree = "<group>"; };
+		BF44DBD420BC102400092671 /* ContinentsTableViewNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinentsTableViewNavigator.swift; sourceTree = "<group>"; };
+		BF44DBD820BC367100092671 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		BF44DBDB20BC41B000092671 /* ContinentTableViewNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinentTableViewNavigator.swift; sourceTree = "<group>"; };
+		BF44DBDC20BC41B000092671 /* ContinentTableViewRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinentTableViewRoute.swift; sourceTree = "<group>"; };
+		BF44DBDD20BC41B000092671 /* ContinentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinentTableViewController.swift; sourceTree = "<group>"; };
+		BF44DBE520BC424E00092671 /* Continents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Continents.storyboard; sourceTree = "<group>"; };
+		BF44DBE720BC42E900092671 /* Continent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Continent.storyboard; sourceTree = "<group>"; };
+		BF44DC1A20BC54DD00092671 /* Country.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Country.storyboard; sourceTree = "<group>"; };
+		BF69CA4220C112DE005F36B8 /* Oceans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Oceans.storyboard; sourceTree = "<group>"; };
+		BF69CA4320C112DE005F36B8 /* OceansTableViewNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceansTableViewNavigator.swift; sourceTree = "<group>"; };
+		BF69CA4420C112DE005F36B8 /* OceansTableViewRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceansTableViewRoute.swift; sourceTree = "<group>"; };
+		BF69CA4520C112DE005F36B8 /* OceansTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceansTableViewController.swift; sourceTree = "<group>"; };
+		BF69CA4B20C11376005F36B8 /* Ocean.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ocean.storyboard; sourceTree = "<group>"; };
+		BF69CA4C20C11376005F36B8 /* OceanTableViewNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceanTableViewNavigator.swift; sourceTree = "<group>"; };
+		BF69CA4D20C11376005F36B8 /* OceanTableViewRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceanTableViewRoute.swift; sourceTree = "<group>"; };
+		BF69CA4E20C11376005F36B8 /* OceanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceanTableViewController.swift; sourceTree = "<group>"; };
+		BF69CA6C20C26B9C005F36B8 /* ModelPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPopulator.swift; sourceTree = "<group>"; };
+		BF7126F020D3AD6F00D83899 /* NavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStrategy.swift; sourceTree = "<group>"; };
+		BF8C682A20C906F900F0A8B5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		BF8C682D20C9073000F0A8B5 /* RootTabBarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarNavigator.swift; sourceTree = "<group>"; };
+		BF8C682F20C9073800F0A8B5 /* RootTabBarRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarRoute.swift; sourceTree = "<group>"; };
+		BF8C683120C90A8F00F0A8B5 /* RootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigator.swift; sourceTree = "<group>"; };
+		BFE3570720C5B28B002F30CC /* Sea.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sea.storyboard; sourceTree = "<group>"; };
+		BFE3570820C5B28B002F30CC /* SeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaViewController.swift; sourceTree = "<group>"; };
+		BFE3570D20C5D317002F30CC /* Continent+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Continent+Extensions.swift"; sourceTree = "<group>"; };
+		BFE3570F20C5D388002F30CC /* Country+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+Extensions.swift"; sourceTree = "<group>"; };
+		BFE3571120C5D3A2002F30CC /* Ocean+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ocean+Extensions.swift"; sourceTree = "<group>"; };
+		BFE3571320C5D3B2002F30CC /* Sea+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sea+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF44DBC720BC0A4300092671 /* Captain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +199,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1F403C20D40F7600CDB3B7 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F403D20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift */,
+				BF1F403F20D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift */,
+				BF1F404520D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
 		BF44DB5520B8808E00092671 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +236,18 @@
 			children = (
 				BF44DB6220B8808E00092671 /* Captain.h */,
 				BF44DB6320B8808E00092671 /* Info.plist */,
+				BF44DB9F20B9A23000092671 /* Navigator.swift */,
+				BF44DBA520B9A52800092671 /* AnyNavigator.swift */,
+				BF44DBA720B9A59500092671 /* GlobalNavigator.swift */,
+				BF8C683120C90A8F00F0A8B5 /* RootNavigator.swift */,
+				BF44DBA320B9A36200092671 /* NavigationError.swift */,
+				BF44DBA120B9A24D00092671 /* NavigationRoute.swift */,
+				BF44DBD820BC367100092671 /* Navigation.swift */,
+				BF7126F020D3AD6F00D83899 /* NavigationStrategy.swift */,
+				BF1F403420D3C96200CDB3B7 /* AnyNavigatorHost.swift */,
+				BF1F403320D3C96200CDB3B7 /* NavigatorHost.swift */,
+				BF1F404320D4148300CDB3B7 /* AnyNavigationBuilder.swift */,
+				BF1F403C20D40F7600CDB3B7 /* Strategy */,
 			);
 			path = Captain;
 			sourceTree = "<group>";
@@ -133,8 +265,17 @@
 			isa = PBXGroup;
 			children = (
 				BF44DB7F20B880DA00092671 /* AppDelegate.swift */,
-				BF44DB8120B880DA00092671 /* FirstViewController.swift */,
-				BF44DB8320B880DA00092671 /* SecondViewController.swift */,
+				BF69CA6C20C26B9C005F36B8 /* ModelPopulator.swift */,
+				BF0C934F20C9B3BA0093D8C3 /* TableViewCell.swift */,
+				BF0C934D20C9B3970093D8C3 /* TableViewHeaderFooterView.swift */,
+				BF8C682C20C9071D00F0A8B5 /* Root */,
+				BF44DBD120BC0AAF00092671 /* Continents */,
+				BF44DBDA20BC41B000092671 /* Continent */,
+				BF44DBE920BC4A6B00092671 /* Country */,
+				BF69CA4120C112DE005F36B8 /* Oceans */,
+				BF69CA4A20C11376005F36B8 /* Ocean */,
+				BFE3570620C5B28B002F30CC /* Sea */,
+				BF44DBF520BC4E8C00092671 /* Models */,
 				BF44DB8520B880DA00092671 /* Main.storyboard */,
 				BF44DB8820B880DB00092671 /* Assets.xcassets */,
 				BF44DB8A20B880DB00092671 /* LaunchScreen.storyboard */,
@@ -150,6 +291,90 @@
 				BF44DB9820B880DC00092671 /* Info.plist */,
 			);
 			path = CaptainDemoUITests;
+			sourceTree = "<group>";
+		};
+		BF44DBD120BC0AAF00092671 /* Continents */ = {
+			isa = PBXGroup;
+			children = (
+				BF44DBD220BC0F4600092671 /* ContinentsTableViewRoute.swift */,
+				BF44DBD420BC102400092671 /* ContinentsTableViewNavigator.swift */,
+				BF44DBCC20BC0A9600092671 /* ContinentsTableViewController.swift */,
+				BF44DBE520BC424E00092671 /* Continents.storyboard */,
+			);
+			path = Continents;
+			sourceTree = "<group>";
+		};
+		BF44DBDA20BC41B000092671 /* Continent */ = {
+			isa = PBXGroup;
+			children = (
+				BF44DBDC20BC41B000092671 /* ContinentTableViewRoute.swift */,
+				BF44DBDB20BC41B000092671 /* ContinentTableViewNavigator.swift */,
+				BF44DBDD20BC41B000092671 /* ContinentTableViewController.swift */,
+				BF44DBE720BC42E900092671 /* Continent.storyboard */,
+			);
+			path = Continent;
+			sourceTree = "<group>";
+		};
+		BF44DBE920BC4A6B00092671 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				BF44DB8120B880DA00092671 /* CountryViewController.swift */,
+				BF44DC1A20BC54DD00092671 /* Country.storyboard */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		BF44DBF520BC4E8C00092671 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFE3570D20C5D317002F30CC /* Continent+Extensions.swift */,
+				BFE3570F20C5D388002F30CC /* Country+Extensions.swift */,
+				BFE3571120C5D3A2002F30CC /* Ocean+Extensions.swift */,
+				BFE3571320C5D3B2002F30CC /* Sea+Extensions.swift */,
+				BF278B6C20C106A0000DF8CF /* Model.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF69CA4120C112DE005F36B8 /* Oceans */ = {
+			isa = PBXGroup;
+			children = (
+				BF69CA4420C112DE005F36B8 /* OceansTableViewRoute.swift */,
+				BF69CA4320C112DE005F36B8 /* OceansTableViewNavigator.swift */,
+				BF69CA4520C112DE005F36B8 /* OceansTableViewController.swift */,
+				BF69CA4220C112DE005F36B8 /* Oceans.storyboard */,
+			);
+			path = Oceans;
+			sourceTree = "<group>";
+		};
+		BF69CA4A20C11376005F36B8 /* Ocean */ = {
+			isa = PBXGroup;
+			children = (
+				BF69CA4D20C11376005F36B8 /* OceanTableViewRoute.swift */,
+				BF69CA4C20C11376005F36B8 /* OceanTableViewNavigator.swift */,
+				BF69CA4E20C11376005F36B8 /* OceanTableViewController.swift */,
+				BF69CA4B20C11376005F36B8 /* Ocean.storyboard */,
+			);
+			path = Ocean;
+			sourceTree = "<group>";
+		};
+		BF8C682C20C9071D00F0A8B5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BF8C682F20C9073800F0A8B5 /* RootTabBarRoute.swift */,
+				BF8C682D20C9073000F0A8B5 /* RootTabBarNavigator.swift */,
+				BF8C682A20C906F900F0A8B5 /* RootTabBarController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		BFE3570620C5B28B002F30CC /* Sea */ = {
+			isa = PBXGroup;
+			children = (
+				BFE3570820C5B28B002F30CC /* SeaViewController.swift */,
+				BFE3570720C5B28B002F30CC /* Sea.storyboard */,
+			);
+			path = Sea;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,10 +434,12 @@
 				BF44DB7920B880DA00092671 /* Sources */,
 				BF44DB7A20B880DA00092671 /* Frameworks */,
 				BF44DB7B20B880DA00092671 /* Resources */,
+				BF44DBCB20BC0A4300092671 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BF44DBCA20BC0A4300092671 /* PBXTargetDependency */,
 			);
 			name = CaptainDemo;
 			productName = CaptainDemo;
@@ -249,15 +476,18 @@
 				TargetAttributes = {
 					BF44DB5E20B8808E00092671 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 					BF44DB6720B8808E00092671 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 					BF44DB7C20B880DA00092671 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 					BF44DB9120B880DC00092671 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = BF44DB7C20B880DA00092671;
 					};
 				};
@@ -303,8 +533,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF44DB8C20B880DB00092671 /* LaunchScreen.storyboard in Resources */,
+				BF69CA4F20C11377005F36B8 /* Ocean.storyboard in Resources */,
+				BF44DBE820BC42E900092671 /* Continent.storyboard in Resources */,
+				BF44DC1B20BC54DD00092671 /* Country.storyboard in Resources */,
+				BF44DBE620BC424E00092671 /* Continents.storyboard in Resources */,
+				BFE3570920C5B28B002F30CC /* Sea.storyboard in Resources */,
 				BF44DB8920B880DB00092671 /* Assets.xcassets in Resources */,
 				BF44DB8720B880DA00092671 /* Main.storyboard in Resources */,
+				BF69CA4620C112DE005F36B8 /* Oceans.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +558,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1F404420D4148300CDB3B7 /* AnyNavigationBuilder.swift in Sources */,
+				BF44DBA620B9A52800092671 /* AnyNavigator.swift in Sources */,
+				BF1F403520D3C96200CDB3B7 /* NavigatorHost.swift in Sources */,
+				BF44DBA020B9A23000092671 /* Navigator.swift in Sources */,
+				BF44DBD920BC367100092671 /* Navigation.swift in Sources */,
+				BF44DBA420B9A36200092671 /* NavigationError.swift in Sources */,
+				BF8C683220C90A8F00F0A8B5 /* RootNavigator.swift in Sources */,
+				BF44DBA820B9A59500092671 /* GlobalNavigator.swift in Sources */,
+				BF7126F120D3AD6F00D83899 /* NavigationStrategy.swift in Sources */,
+				BF1F404020D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift in Sources */,
+				BF1F404620D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift in Sources */,
+				BF1F403620D3C96200CDB3B7 /* AnyNavigatorHost.swift in Sources */,
+				BF1F403E20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift in Sources */,
+				BF44DBA220B9A24D00092671 /* NavigationRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,9 +587,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF44DB8420B880DA00092671 /* SecondViewController.swift in Sources */,
+				BF69CA5020C11377005F36B8 /* OceanTableViewNavigator.swift in Sources */,
+				BF44DBE020BC41B000092671 /* ContinentTableViewRoute.swift in Sources */,
+				BF69CA4820C112DE005F36B8 /* OceansTableViewRoute.swift in Sources */,
+				BFE3571420C5D3B2002F30CC /* Sea+Extensions.swift in Sources */,
+				BF0C934E20C9B3970093D8C3 /* TableViewHeaderFooterView.swift in Sources */,
+				BF44DBD520BC102400092671 /* ContinentsTableViewNavigator.swift in Sources */,
+				BF44DBD320BC0F4600092671 /* ContinentsTableViewRoute.swift in Sources */,
 				BF44DB8020B880DA00092671 /* AppDelegate.swift in Sources */,
-				BF44DB8220B880DA00092671 /* FirstViewController.swift in Sources */,
+				BF69CA6D20C26B9C005F36B8 /* ModelPopulator.swift in Sources */,
+				BFE3571220C5D3A2002F30CC /* Ocean+Extensions.swift in Sources */,
+				BFE3571020C5D388002F30CC /* Country+Extensions.swift in Sources */,
+				BF0C935020C9B3BA0093D8C3 /* TableViewCell.swift in Sources */,
+				BF69CA5220C11377005F36B8 /* OceanTableViewController.swift in Sources */,
+				BF69CA4920C112DE005F36B8 /* OceansTableViewController.swift in Sources */,
+				BF8C683020C9073800F0A8B5 /* RootTabBarRoute.swift in Sources */,
+				BFE3570A20C5B28B002F30CC /* SeaViewController.swift in Sources */,
+				BF44DBDF20BC41B000092671 /* ContinentTableViewNavigator.swift in Sources */,
+				BF8C682B20C906F900F0A8B5 /* RootTabBarController.swift in Sources */,
+				BFE3570E20C5D317002F30CC /* Continent+Extensions.swift in Sources */,
+				BF44DBE120BC41B000092671 /* ContinentTableViewController.swift in Sources */,
+				BF44DBCD20BC0A9600092671 /* ContinentsTableViewController.swift in Sources */,
+				BF69CA4720C112DE005F36B8 /* OceansTableViewNavigator.swift in Sources */,
+				BF69CA5120C11377005F36B8 /* OceanTableViewRoute.swift in Sources */,
+				BF44DB8220B880DA00092671 /* CountryViewController.swift in Sources */,
+				BF278B6E20C106A0000DF8CF /* Model.xcdatamodeld in Sources */,
+				BF8C682E20C9073000F0A8B5 /* RootTabBarNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +636,11 @@
 			isa = PBXTargetDependency;
 			target = BF44DB7C20B880DA00092671 /* CaptainDemo */;
 			targetProxy = BF44DB9320B880DC00092671 /* PBXContainerItemProxy */;
+		};
+		BF44DBCA20BC0A4300092671 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF44DB5E20B8808E00092671 /* Captain */;
+			targetProxy = BF44DBC920BC0A4300092671 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -509,9 +787,11 @@
 		BF44DB7420B8808E00092671 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GSGGFU6A2H;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -525,7 +805,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.Captain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -533,9 +814,11 @@
 		BF44DB7520B8808E00092671 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = GSGGFU6A2H;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -549,7 +832,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.Captain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -557,6 +840,7 @@
 		BF44DB7720B8808E00092671 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CaptainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -574,6 +858,7 @@
 		BF44DB7820B8808E00092671 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CaptainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -591,6 +876,7 @@
 		BF44DB9A20B880DC00092671 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSGGFU6A2H;
@@ -601,7 +887,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.CaptainDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -609,6 +895,7 @@
 		BF44DB9B20B880DC00092671 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GSGGFU6A2H;
@@ -619,7 +906,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.CaptainDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -638,7 +925,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.CaptainDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CaptainDemo;
 			};
@@ -658,7 +945,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.regexident.CaptainDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CaptainDemo;
 			};
@@ -713,6 +1000,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF278B6C20C106A0000DF8CF /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF278B6D20C106A0000DF8CF /* Model.xcdatamodel */,
+			);
+			currentVersion = BF278B6D20C106A0000DF8CF /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF44DB5620B8808E00092671 /* Project object */;
 }

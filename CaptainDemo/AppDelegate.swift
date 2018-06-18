@@ -7,40 +7,92 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    static var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    var rootTabBarController: RootTabBarController {
+        guard let window = self.window else {
+            fatalError("Expected `self.window`, found `nil`.")
+        }
+        guard let controller = window.rootViewController as? RootTabBarController else {
+            fatalError("Expected `window.rootViewController`, found `nil`.")
+        }
+        return controller
+    }
+
+    var rootTabBarNavigator: RootTabBarNavigator {
+        let source = self.rootTabBarController
+        return RootTabBarNavigator.attached(to: source)
+    }
+
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?
+    ) -> Bool {
         // Override point for customization after application launch.
+        let tabBarController = self.window!.rootViewController as! UITabBarController
+
+        for viewController in tabBarController.viewControllers ?? [] {
+            guard let navigationViewController = viewController as? UINavigationController else {
+                continue
+            }
+            guard let viewController = navigationViewController.viewControllers.first else {
+                continue
+            }
+            let managedObjectContext = self.persistentContainer.viewContext
+            self.rootTabBarController.managedObjectContext = managedObjectContext
+            if let continentsTableViewController = viewController as? ContinentsTableViewController {
+                continentsTableViewController.managedObjectContext = managedObjectContext
+            } else if let oceansTableViewController = viewController as? OceansTableViewController {
+                oceansTableViewController.managedObjectContext = managedObjectContext
+            } else {
+                fatalError("Unknown controller: \(type(of: viewController))")
+            }
+        }
+
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
+    // MARK: - Core Data stack
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
+    lazy var persistentContainer: NSPersistentContainer = {
+        /*
+         The persistent container for the application. This implementation
+         creates and returns a container, having loaded the store for the
+         application to it. This property is optional since there are legitimate
+         error conditions that could cause the creation of the store to fail.
+         */
+        let container = NSPersistentContainer(name: "Model")
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
+        let description = NSPersistentStoreDescription()
+        description.type = NSInMemoryStoreType
+        container.persistentStoreDescriptions = [description]
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
+                /*
+                 Typical reasons for an error here include:
+                 * The parent directory does not exist, cannot be created, or disallows writing.
+                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                 * The device is out of space.
+                 * The store could not be migrated to the current model version.
+                 Check the error message to determine what the actual problem was.
+                 */
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+            ModelPopulator().populate(managedObjectContext: container.viewContext)
+        })
+        return container
+    }()
 }
-

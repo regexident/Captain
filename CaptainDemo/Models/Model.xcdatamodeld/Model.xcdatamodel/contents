@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Continent" representedClassName="Continent" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="continent" inverseEntity="Country" syncable="YES"/>
+        <relationship name="oceans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ocean" inverseName="continents" inverseEntity="Ocean" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="continent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Continent" inverseName="countries" inverseEntity="Continent" syncable="YES"/>
+        <relationship name="oceans" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ocean" inverseName="countries" inverseEntity="Ocean" syncable="YES"/>
+    </entity>
+    <entity name="Ocean" representedClassName="Ocean" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="continents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Continent" inverseName="oceans" inverseEntity="Continent" syncable="YES"/>
+        <relationship name="countries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="oceans" inverseEntity="Country" syncable="YES"/>
+        <relationship name="seas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sea" inverseName="ocean" inverseEntity="Sea" syncable="YES"/>
+    </entity>
+    <entity name="Sea" representedClassName="Sea" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="ocean" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ocean" inverseName="seas" inverseEntity="Ocean" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Continent" positionX="-54" positionY="-36" width="128" height="105"/>
+        <element name="Country" positionX="27" positionY="72" width="128" height="105"/>
+        <element name="Ocean" positionX="142" positionY="-63" width="128" height="120"/>
+        <element name="Sea" positionX="178" positionY="36" width="128" height="90"/>
+    </elements>
+</model>
