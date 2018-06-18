@@ -30,8 +30,8 @@ extension ContinentTableViewNavigator: AnyNavigator {
     public func anyStrategy(
         for route: AnyRoute,
         from source: AnySource
-    ) throws -> AnyNavigationStrategy {
-        return DefaultModalNavigationStrategy()
+    ) throws -> PresentationStrategy {
+        return ModalPresentationStrategy()
     }
 }
 

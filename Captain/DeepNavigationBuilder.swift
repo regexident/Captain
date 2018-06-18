@@ -1,33 +1,25 @@
 //
-//  AnyNavigationBuilder.swift
+//  DeepNavigationBuilder.swift
 //  Captain
 //
-//  Created by Vincent Esche on 6/15/18.
+//  Created by Vincent Esche on 6/18/18.
 //  Copyright © 2018 Vincent Esche. All rights reserved.
 //
 
 import UIKit
 
-public protocol AnyNavigationBuilder {
-    func destinations(
-        for route: AnyNavigationRoute,
-        from source: AnyNavigationSource,
-        on navigator: AnyNavigator
-    ) throws -> [AnyNavigationDestination]
-}
-
-public class DefaultAnyNavigationBuilder {
+public class DeepNavigationBuilder {
     public init() {
         // state-less
     }
 }
 
-extension DefaultAnyNavigationBuilder: AnyNavigationBuilder {
+extension DeepNavigationBuilder: NavigationBuilder {
     public func destinations(
         for route: AnyNavigationRoute,
         from source: AnyNavigationSource,
         on navigator: AnyNavigator
-    ) throws -> [AnyNavigationDestination] {
+        ) throws -> [AnyNavigationDestination] {
         var presentingNavigator: AnyNavigator = navigator
         var destinations: [AnyNavigationDestination] = []
         var source: AnyNavigationSource = source
@@ -58,3 +50,4 @@ extension DefaultAnyNavigationBuilder: AnyNavigationBuilder {
         return destinations
     }
 }
+

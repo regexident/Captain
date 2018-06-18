@@ -27,13 +27,17 @@ class CountryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let country = self.country {
+            self.update(country: country)
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         // If shown modally, make sure the user can actually close the controller:
         if self.presentingViewController != nil {
             self.addCloseButton()
-        }
-
-        if let country = self.country {
-            self.update(country: country)
         }
     }
 

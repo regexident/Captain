@@ -1,5 +1,5 @@
 //
-//  DefaultTabBarNavigationStrategy.swift
+//  TabBarPresentationStrategy.swift
 //  Captain
 //
 //  Created by Vincent Esche on 6/15/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DefaultTabBarNavigationStrategy {
+public class TabBarPresentationStrategy {
     public let animated: Bool
 
     public init(animated: Bool = true) {
@@ -16,7 +16,7 @@ public class DefaultTabBarNavigationStrategy {
     }
 }
 
-extension DefaultTabBarNavigationStrategy: AnyNavigationStrategy {
+extension TabBarPresentationStrategy: PresentationStrategy {
     public func present(
         _ destinations: [AnyNavigationDestination],
         from source: AnyNavigationSource

@@ -44,6 +44,16 @@ public protocol Navigator: AnyNavigator {
         for route: Route,
         from source: Source
     ) throws -> AnyNavigationDestination
+
+    func builder(
+        for route: Route,
+        from source: Source
+    ) throws -> NavigationBuilder
+
+    func strategy(
+        for route: Route,
+        from source: Source
+    ) throws -> PresentationStrategy
 }
 
 // MARK: - Navigator: Navigator (Default Implementations)
@@ -75,6 +85,26 @@ extension Navigator {
 
     public func dismiss(from source: Source, completion: (() -> Void)?) throws {
         source.dismiss(animated: false, completion: completion)
+    }
+
+    public func builder(
+        for route: Route,
+        from source: Source
+    ) throws -> NavigationBuilder {
+        return DeepNavigationBuilder()
+    }
+
+    public func strategy(
+        for route: Route,
+        from source: Source
+    ) throws -> PresentationStrategy {
+        if (source.navigationController ?? (source as? UINavigationController)) != nil {
+            return PushPresentationStrategy()
+        } else if (source.tabBarController ?? (source as? UITabBarController)) != nil {
+            return TabBarPresentationStrategy()
+        } else {
+            return ModalPresentationStrategy()
+        }
     }
 
     public func withTyped<T>(
@@ -127,6 +157,38 @@ extension Navigator {
         }
     }
 
+    public func prepareAny(
+        navigation: AnyNavigation
+    ) throws {
+        try self.withTyped(source: navigation.source, route: navigation.route) { source, route in
+            let destination = navigation.destination
+            try self.prepare(navigation: Navigation(
+                route: route,
+                source: source,
+                destination: destination
+            ))
+        }
+    }
+
+    public func anyBuilder(
+        for anyRoute: AnyRoute,
+        from anySource: AnySource
+    ) throws -> NavigationBuilder {
+        return try self.withTyped(source: anySource, route: anyRoute) { source, route in
+            return try self.builder(for: route, from: source)
+        }
+    }
+
+    public func anyStrategy(
+        for anyRoute: AnyRoute,
+        from anySource: AnySource
+    ) throws -> PresentationStrategy {
+        return try self.withTyped(source: anySource, route: anyRoute) { source, route in
+            return try self.strategy(for: route, from: source)
+        }
+    }
+
+    /// Do not call directly, for internal use only. Override to customize behavior.
     public func anyNextDestination(
         for route: AnyNavigationRoute,
         from source: AnyNavigationSource
@@ -136,23 +198,13 @@ extension Navigator {
         }
     }
 
+    /// Do not call directly, for internal use only. Override to customize behavior.
     public func anyNextDestinations(
         for route: AnyNavigationRoute,
         from source: AnyNavigationSource
     ) throws -> [AnyNavigationDestination] {
         return try self.withTyped(source: source, route: route) { source, route in
             return try self.anyNextDestinations(for: route, from: source)
-        }
-    }
-
-    public func prepareAny(navigation: AnyNavigation) throws {
-        try self.withTyped(source: navigation.source, route: navigation.route) { source, route in
-            let destination = navigation.destination
-            try self.prepare(navigation: Navigation(
-                route: route,
-                source: source,
-                destination: destination
-            ))
         }
     }
 }

@@ -84,6 +84,28 @@ class OceanTableViewController: UITableViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // If shown modally, make sure the user can actually close the controller:
+        if self.presentingViewController != nil {
+            self.addCloseButton()
+        }
+    }
+
+    @objc private func close(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    private func addCloseButton() {
+        self.navigationItem.rightBarButtonItem  = UIBarButtonItem(
+            title: "Close",
+            style: .plain,
+            target: self,
+            action: #selector(OceanTableViewController.close(_:))
+        )
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -148,8 +170,6 @@ class OceanTableViewController: UITableViewController {
         }
 
         navigator.controller(self, didSelectSea: sea)
-
-        // <- CAPTAIN-RELEVANT CODE ENDS HERE
     }
 
     func didSelect(continent: Continent) {
@@ -158,8 +178,6 @@ class OceanTableViewController: UITableViewController {
         }
 
         navigator.controller(self, didSelectContinent: continent)
-
-        // <- CAPTAIN-RELEVANT CODE ENDS HERE
     }
 
     func configureCell(_ cell: UITableViewCell, withSea sea: Sea) {

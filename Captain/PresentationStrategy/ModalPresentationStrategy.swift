@@ -1,5 +1,5 @@
 //
-//  DefaultModalNavigationStrategy.swift
+//  ModalPresentationStrategy.swift
 //  Captain
 //
 //  Created by Vincent Esche on 6/15/18.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-public class DefaultModalNavigationStrategy {
+public class ModalPresentationStrategy {
     public let animated: Bool
-    let completion: (() -> Void)?
+    private let completion: (() -> Void)?
+    private var presentedViewController: UIViewController?
 
     public init(
         animated: Bool = true,
@@ -21,7 +22,7 @@ public class DefaultModalNavigationStrategy {
     }
 }
 
-extension DefaultModalNavigationStrategy: AnyNavigationStrategy {
+extension ModalPresentationStrategy: PresentationStrategy {
     public func present(
         _ destinations: [AnyNavigationDestination],
         from source: AnyNavigationSource
@@ -31,10 +32,25 @@ extension DefaultModalNavigationStrategy: AnyNavigationStrategy {
             destinations,
             animated: false
         )
+        print("Destinations:", destinations)
+        self.presentedViewController = navigationController
         source.present(
             navigationController,
             animated: self.animated,
-            completion: self.completion
+            completion: {
+                self.completion?()
+            }
+        )
+    }
+}
+
+extension ModalPresentationStrategy: DismissablePresentationStrategy {
+    public func dismiss(from anyDestination: AnyNavigationDestination) throws {
+        self.presentedViewController?.dismiss(
+            animated: self.animated,
+            completion: {
+                self.completion?()
+            }
         )
     }
 }

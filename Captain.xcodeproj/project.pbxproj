@@ -11,10 +11,12 @@
 		BF0C935020C9B3BA0093D8C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0C934F20C9B3BA0093D8C3 /* TableViewCell.swift */; };
 		BF1F403520D3C96200CDB3B7 /* NavigatorHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403320D3C96200CDB3B7 /* NavigatorHost.swift */; };
 		BF1F403620D3C96200CDB3B7 /* AnyNavigatorHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403420D3C96200CDB3B7 /* AnyNavigatorHost.swift */; };
-		BF1F403E20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403D20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift */; };
-		BF1F404020D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403F20D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift */; };
-		BF1F404420D4148300CDB3B7 /* AnyNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F404320D4148300CDB3B7 /* AnyNavigationBuilder.swift */; };
-		BF1F404620D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F404520D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift */; };
+		BF1F403E20D40F7F00CDB3B7 /* PushPresentationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403D20D40F7F00CDB3B7 /* PushPresentationStrategy.swift */; };
+		BF1F404020D40F9000CDB3B7 /* ModalPresentationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F403F20D40F9000CDB3B7 /* ModalPresentationStrategy.swift */; };
+		BF1F404420D4148300CDB3B7 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F404320D4148300CDB3B7 /* NavigationBuilder.swift */; };
+		BF1F404620D4296700CDB3B7 /* TabBarPresentationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F404520D4296700CDB3B7 /* TabBarPresentationStrategy.swift */; };
+		BF2480E920D8050C0065032F /* DeepNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2480E820D8050C0065032F /* DeepNavigationBuilder.swift */; };
+		BF2480EB20D805420065032F /* ShallowNavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2480EA20D805420065032F /* ShallowNavigationBuilder.swift */; };
 		BF278B6E20C106A0000DF8CF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF278B6C20C106A0000DF8CF /* Model.xcdatamodeld */; };
 		BF44DB6920B8808E00092671 /* Captain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF44DB5F20B8808E00092671 /* Captain.framework */; };
 		BF44DB6E20B8808E00092671 /* CaptainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF44DB6D20B8808E00092671 /* CaptainTests.swift */; };
@@ -51,7 +53,7 @@
 		BF69CA5120C11377005F36B8 /* OceanTableViewRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4D20C11376005F36B8 /* OceanTableViewRoute.swift */; };
 		BF69CA5220C11377005F36B8 /* OceanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA4E20C11376005F36B8 /* OceanTableViewController.swift */; };
 		BF69CA6D20C26B9C005F36B8 /* ModelPopulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF69CA6C20C26B9C005F36B8 /* ModelPopulator.swift */; };
-		BF7126F120D3AD6F00D83899 /* NavigationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7126F020D3AD6F00D83899 /* NavigationStrategy.swift */; };
+		BF7126F120D3AD6F00D83899 /* PresentationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7126F020D3AD6F00D83899 /* PresentationStrategy.swift */; };
 		BF8C682B20C906F900F0A8B5 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C682A20C906F900F0A8B5 /* RootTabBarController.swift */; };
 		BF8C682E20C9073000F0A8B5 /* RootTabBarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C682D20C9073000F0A8B5 /* RootTabBarNavigator.swift */; };
 		BF8C683020C9073800F0A8B5 /* RootTabBarRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C682F20C9073800F0A8B5 /* RootTabBarRoute.swift */; };
@@ -107,10 +109,12 @@
 		BF0C934F20C9B3BA0093D8C3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BF1F403320D3C96200CDB3B7 /* NavigatorHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorHost.swift; sourceTree = "<group>"; };
 		BF1F403420D3C96200CDB3B7 /* AnyNavigatorHost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNavigatorHost.swift; sourceTree = "<group>"; };
-		BF1F403D20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPushNavigationStrategy.swift; sourceTree = "<group>"; };
-		BF1F403F20D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultModalNavigationStrategy.swift; sourceTree = "<group>"; };
-		BF1F404320D4148300CDB3B7 /* AnyNavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNavigationBuilder.swift; sourceTree = "<group>"; };
-		BF1F404520D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTabBarNavigationStrategy.swift; sourceTree = "<group>"; };
+		BF1F403D20D40F7F00CDB3B7 /* PushPresentationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushPresentationStrategy.swift; sourceTree = "<group>"; };
+		BF1F403F20D40F9000CDB3B7 /* ModalPresentationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationStrategy.swift; sourceTree = "<group>"; };
+		BF1F404320D4148300CDB3B7 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		BF1F404520D4296700CDB3B7 /* TabBarPresentationStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPresentationStrategy.swift; sourceTree = "<group>"; };
+		BF2480E820D8050C0065032F /* DeepNavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepNavigationBuilder.swift; sourceTree = "<group>"; };
+		BF2480EA20D805420065032F /* ShallowNavigationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShallowNavigationBuilder.swift; sourceTree = "<group>"; };
 		BF278B6D20C106A0000DF8CF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BF44DB5F20B8808E00092671 /* Captain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Captain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF44DB6220B8808E00092671 /* Captain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Captain.h; sourceTree = "<group>"; };
@@ -152,7 +156,7 @@
 		BF69CA4D20C11376005F36B8 /* OceanTableViewRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceanTableViewRoute.swift; sourceTree = "<group>"; };
 		BF69CA4E20C11376005F36B8 /* OceanTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OceanTableViewController.swift; sourceTree = "<group>"; };
 		BF69CA6C20C26B9C005F36B8 /* ModelPopulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPopulator.swift; sourceTree = "<group>"; };
-		BF7126F020D3AD6F00D83899 /* NavigationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStrategy.swift; sourceTree = "<group>"; };
+		BF7126F020D3AD6F00D83899 /* PresentationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationStrategy.swift; sourceTree = "<group>"; };
 		BF8C682A20C906F900F0A8B5 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		BF8C682D20C9073000F0A8B5 /* RootTabBarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarNavigator.swift; sourceTree = "<group>"; };
 		BF8C682F20C9073800F0A8B5 /* RootTabBarRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarRoute.swift; sourceTree = "<group>"; };
@@ -199,14 +203,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF1F403C20D40F7600CDB3B7 /* Strategy */ = {
+		BF1F403C20D40F7600CDB3B7 /* PresentationStrategy */ = {
 			isa = PBXGroup;
 			children = (
-				BF1F403D20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift */,
-				BF1F403F20D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift */,
-				BF1F404520D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift */,
+				BF1F403D20D40F7F00CDB3B7 /* PushPresentationStrategy.swift */,
+				BF1F403F20D40F9000CDB3B7 /* ModalPresentationStrategy.swift */,
+				BF1F404520D4296700CDB3B7 /* TabBarPresentationStrategy.swift */,
 			);
-			path = Strategy;
+			path = PresentationStrategy;
 			sourceTree = "<group>";
 		};
 		BF44DB5520B8808E00092671 = {
@@ -243,11 +247,13 @@
 				BF44DBA320B9A36200092671 /* NavigationError.swift */,
 				BF44DBA120B9A24D00092671 /* NavigationRoute.swift */,
 				BF44DBD820BC367100092671 /* Navigation.swift */,
-				BF7126F020D3AD6F00D83899 /* NavigationStrategy.swift */,
+				BF7126F020D3AD6F00D83899 /* PresentationStrategy.swift */,
 				BF1F403420D3C96200CDB3B7 /* AnyNavigatorHost.swift */,
 				BF1F403320D3C96200CDB3B7 /* NavigatorHost.swift */,
-				BF1F404320D4148300CDB3B7 /* AnyNavigationBuilder.swift */,
-				BF1F403C20D40F7600CDB3B7 /* Strategy */,
+				BF1F404320D4148300CDB3B7 /* NavigationBuilder.swift */,
+				BF2480E820D8050C0065032F /* DeepNavigationBuilder.swift */,
+				BF2480EA20D805420065032F /* ShallowNavigationBuilder.swift */,
+				BF1F403C20D40F7600CDB3B7 /* PresentationStrategy */,
 			);
 			path = Captain;
 			sourceTree = "<group>";
@@ -558,7 +564,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF1F404420D4148300CDB3B7 /* AnyNavigationBuilder.swift in Sources */,
+				BF2480E920D8050C0065032F /* DeepNavigationBuilder.swift in Sources */,
+				BF1F404420D4148300CDB3B7 /* NavigationBuilder.swift in Sources */,
 				BF44DBA620B9A52800092671 /* AnyNavigator.swift in Sources */,
 				BF1F403520D3C96200CDB3B7 /* NavigatorHost.swift in Sources */,
 				BF44DBA020B9A23000092671 /* Navigator.swift in Sources */,
@@ -566,11 +573,12 @@
 				BF44DBA420B9A36200092671 /* NavigationError.swift in Sources */,
 				BF8C683220C90A8F00F0A8B5 /* RootNavigator.swift in Sources */,
 				BF44DBA820B9A59500092671 /* GlobalNavigator.swift in Sources */,
-				BF7126F120D3AD6F00D83899 /* NavigationStrategy.swift in Sources */,
-				BF1F404020D40F9000CDB3B7 /* DefaultModalNavigationStrategy.swift in Sources */,
-				BF1F404620D4296700CDB3B7 /* DefaultTabBarNavigationStrategy.swift in Sources */,
+				BF7126F120D3AD6F00D83899 /* PresentationStrategy.swift in Sources */,
+				BF2480EB20D805420065032F /* ShallowNavigationBuilder.swift in Sources */,
+				BF1F404020D40F9000CDB3B7 /* ModalPresentationStrategy.swift in Sources */,
+				BF1F404620D4296700CDB3B7 /* TabBarPresentationStrategy.swift in Sources */,
 				BF1F403620D3C96200CDB3B7 /* AnyNavigatorHost.swift in Sources */,
-				BF1F403E20D40F7F00CDB3B7 /* DefaultPushNavigationStrategy.swift in Sources */,
+				BF1F403E20D40F7F00CDB3B7 /* PushPresentationStrategy.swift in Sources */,
 				BF44DBA220B9A24D00092671 /* NavigationRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,8 +30,8 @@ extension OceansTableViewNavigator: AnyNavigator {
     public func anyStrategy(
         for route: AnyRoute,
         from source: AnySource
-    ) throws -> AnyNavigationStrategy {
-        return DefaultPushNavigationStrategy()
+    ) throws -> PresentationStrategy {
+        return PushPresentationStrategy()
     }
 }
 

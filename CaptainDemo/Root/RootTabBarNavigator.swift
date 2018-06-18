@@ -24,13 +24,6 @@ extension RootTabBarNavigator: AnyNavigator {
     func dismissAny(from source: AnyNavigationSource) throws {
         fatalError()
     }
-
-    public func anyStrategy(
-        for route: AnyRoute,
-        from source: AnySource
-    ) throws -> AnyNavigationStrategy {
-        return DefaultTabBarNavigationStrategy()
-    }
 }
 
 extension RootTabBarNavigator: Navigator {
@@ -81,6 +74,20 @@ extension RootTabBarNavigator: Navigator {
             let storyboard = UIStoryboard(name: "Oceans", bundle: nil)
             return storyboard.instantiateInitialViewController()!
         }
+    }
+
+    public func builder(
+        for route: Route,
+        from source: Source
+    ) throws -> NavigationBuilder {
+        return DeepNavigationBuilder()
+    }
+
+    public func strategy(
+        for route: Route,
+        from source: Source
+    ) throws -> PresentationStrategy {
+        return TabBarPresentationStrategy()
     }
 }
 
