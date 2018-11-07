@@ -8,4 +8,4 @@ See the **CaptainDemo** project for example usage.
 
 ## License
 
-**Captain** is available under the **BSD-3 clause license**. See the `LICENSE` file for more info.
+**Captain** is available under the **MPL-2 license**. See the `LICENSE` file for more info.
